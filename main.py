@@ -3,9 +3,19 @@ from math import sqrt
 #### Fonction secondaire
 
 
-def isprime(p):
+def isprime(chiffre):
 
-    # votre code ici
+    premier = True;
+    if chiffre < 2:
+        premier = False
+        return False
+    else:
+        for n in range(2, chiffre):
+            if chiffre % n == 0:
+                premier = False
+                return False
+                break;
+        return True
 
     pass
 
